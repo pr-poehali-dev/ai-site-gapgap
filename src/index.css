@@ -1,23 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 26 27 35;
+    --foreground: 255 255 255;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 33 37 52;
+    --card-foreground: 255 255 255;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 33 37 52;
+    --popover-foreground: 255 255 255;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 197 79% 71%;
+    --primary-foreground: 26 27 35;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 155 135 245;
+    --secondary-foreground: 255 255 255;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -96,6 +98,43 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  .font-orbitron {
+    font-family: "Orbitron", monospace;
+  }
+
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #70d4ff 0%, #9b87f5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #70d4ff 0%, #9b87f5 100%);
+  }
+
+  .ai-glow {
+    box-shadow: 0 0 20px rgba(112, 212, 255, 0.3);
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 }
